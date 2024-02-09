@@ -33,3 +33,5 @@ let dataScritta = giorno + "/" + mese + "/" + anno;
 let orarioScritto = ore + ":" + minuti;
 
 
+// Scrivo la data della dine del timer nel div #dataScadenza
+document.getElementById("dataScadenza").innerHTML = "Tempo mancante fino a " + dataScritta + "alle " + orarioScritto;
