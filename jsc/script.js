@@ -60,8 +60,17 @@ document.getElementById("calcola-tempo").addEventListener("click", function(){
         let dataCorrente = new Date().getTime();
 
         // Dichiaro la differenza tra la data corrente e la data di scadenza
-        let difference = dataFine - dataCorrente
+        let differenza = dataFine - dataCorrente
 
+
+        // Calcolo le ore, i minuti e i secondi
+        // Ore
+        let oreMancanti = Math.floor(differenza / (1000 * 60 * 60));
+        // Minuti
+        let minutiMancanti = Math.floor((differenza % (1000 * 60 * 60)) / (1000 * 60));
+        // Secondi
+        let secondiMancanti = Math.floor((differenza % (1000 * 60)) / 1000);
+        
     }
 
 })
