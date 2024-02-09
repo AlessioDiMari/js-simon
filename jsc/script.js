@@ -11,3 +11,13 @@ let dataFine = new Date();
 dataFine.setDate(dataFine.getDate() + 1)
 
 
+// Faccio la formattazione della data in "giorno"/"mese"/"anno"
+
+let giorno = dataFine.getDate();
+let mese = dataFine.getMonth() + 1;
+let anno = dataFine.getFullYear();
+
+// Creo la srtinga della data
+let dataScritta = giorno + "/" + mese + "/" + anno;
+
+
