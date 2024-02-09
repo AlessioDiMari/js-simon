@@ -71,6 +71,8 @@ document.getElementById("calcola-tempo").addEventListener("click", function(){
         // Secondi
         let secondiMancanti = Math.floor((differenza % (1000 * 60)) / 1000);
         
+        // Scrivo il tempo mancante all'interno del div "timer"
+        document.getElementById("timer").innerHTML ="Mancano esattamente : " + oreMancanti + "h" + minutiMancanti + "m" + secondiMancanti + "s";
     }
 
 })
