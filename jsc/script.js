@@ -35,3 +35,33 @@ let orarioScritto = ore + ":" + minuti;
 
 // Scrivo la data della dine del timer nel div #dataScadenza
 document.getElementById("dataScadenza").innerHTML = "Tempo mancante fino a " + dataScritta + "alle " + orarioScritto;
+
+
+// Creo una funzione che mi farà vedere il tempo rimanente
+// (che si aggiorna ogni secondo) alla data di scadenza.
+// Questo timer verrà visualizzato in pagina al "click"
+// del button "calcola-tempo"
+
+// Setto l'eventListener al button
+document.getElementById("calcola-tempo").addEventListener("click", function(){
+
+    // Per far si che il timer di aggiorni ogni secondo
+    // gli assegno un setInterval() con delay
+    // di 1000 millisecondi (un secondo) che continuerà
+    // a funzionare fino a che la differenza di tempo tra
+    // la data di scadenza e quella in cui viene cliccato
+    // il button è minore di 0
+    setInterval(tempoMancante, 1000);
+
+    // Creo la funzione che calcolerà il tempo mancante
+    function tempoMancante() {
+
+        // Dichiaro la data e l'orario corrente
+        let dataCorrente = new Date().getTime();
+
+        // Dichiaro la differenza tra la data corrente e la data di scadenza
+        let difference = dataFine - dataCorrente
+
+    }
+
+})
